@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registro de Asamblea - UPRM</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Spectral+SC:500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/estudiante.css">
+    <link rel="stylesheet" type="text/css" href="css/multi-screen-css.css">
+
+
+</head>
+
+<body>
+<div id="screen1" class="screen text-center ms-container ms-default white" >
+
+    <br>
+    <img src="votelogo.png" style="width: 15vmin">
+    <h1 style="font-family: 'Spectral SC';">Registro de Asamblea - UPRM</h1>
+    <form>
+
+        <!--Esto cambia cuando alguien hace login.-->
+        <p id="CurrentUserP">No user is signed in.</p>
+
+        <div class="form-group">
+            <i class="far fa-envelope"></i>
+            <input type="email" id="adminEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <i class="fas fa-key"></i>
+            <input type="password" id="adminPass" placeholder="Password">
+        </div>
+
+        <button type="button" class="btn btn-outline-light" onclick="adminSignIn()"><i class="fas fa-lock"></i> Sign In</button>
+
+    </form>
+</div>
+
+
+
+
+<div id="screen2"  class="screen ms-container text-center white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="font-family: 'Spectral SC'"><img class="system-icon" src="vote.png"> RUM - Vote</a>
+        <button class="btn btn-outline-danger btn-sm right-align"  onclick="adminSignOut()">Sign Out</button>
+    </nav>
+    
+
+    <h5>Create user:</h5>
+    <div class="container">
+
+
+                <p>Input Email</p>
+                <input type="text" id="emailTextBox">
+
+                <button class="btn btn-outline-light" onclick="registerUser()">Create</button>
+
+                <!--Si ocurre un error, sale el codigo de error aqui.-->
+                <p id="error"></p>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js">
+</script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBi-b7XvOWghU0Sres2GZRnSAy-aj3UcjE",
+        authDomain: "votoelectronico-uprm.firebaseapp.com",
+        databaseURL: "https://votoelectronico-uprm.firebaseio.com",
+        projectId: "votoelectronico-uprm",
+        storageBucket: "",
+        messagingSenderId: "327811555356"
+    };
+    firebase.initializeApp(config);
+</script>
+<!--Default Code for Firebase-->
+<script type="text/javascript" src="js/registro.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="js/multi-screen.js"></script>
+<script type="text/javascript">$(document).ready(function() { MultiScreen.init(); });</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+</body>
+
+</html>

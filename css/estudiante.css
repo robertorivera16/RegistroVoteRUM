@@ -1,0 +1,63 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+#screen1{
+	background-color: #399820;
+}
+
+#screen2{
+	background-color: #399820;
+}
+
+.screen{
+	width: 100%;
+	height: 100%;
+}
+
+.system-icon{
+	height: 25px;
+	width: 25px;
+}
+
+.voting-box{
+	background-color: #ECF0F1;
+	text-align: center;
+	border-radius: 10px;
+	margin-right: 15%;
+	margin-left: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#MocionItem{
+	font-size: 5vmin;
+}
+
+.white{
+	color: white;
+}
+
+input{
+	color: #292828;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5px;
+	border-bottom-color: white;
+	border-radius: 3px;
+}
+
+.card-block{
+	color: #052801;
+}
+
+.userInfo{
+	padding-top: 5px;
+}
+
+
+
+
+
+
